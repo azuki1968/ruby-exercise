@@ -8,7 +8,16 @@ class Foo
         @a
     end
 end
-foo1 = Foo.new(1)   #newメソッド実行でオブジェクトを作成
-foo2 = Foo.new(2)   #newメソッド実行でオブジェクトを作成
-p foo1.method1
-p foo2.method1
+class FooExt < Foo
+    def initialize (a,b)  #引数a,bを受ける初期化メソッド
+        @b = b  #@bはインスタンス変数
+        super a   # a=> 3 ,@a=>3
+    end
+    def method2(c)
+        @a + @b + c
+    end
+end
+fooExt = FooExt.new(3, 4)   #newメソッド実行でオブジェクトを作成
+p fooExt.method1     #=> 3
+p fooExt.method2(5)  #=> 12
+p FooExt.superclass == Foo 
