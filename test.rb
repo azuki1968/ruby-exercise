@@ -18,5 +18,7 @@ p "c-2"
 foo2 = Foo.new(2)   #newメソッド実行でオブジェクトを作成
 p "c-3"
 p foo1.method1
+p foo1.object_id
 p "c-4"
 p foo2.method1
+p foo2.object_id

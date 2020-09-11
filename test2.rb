@@ -15,5 +15,9 @@ class Foo
 end
 a = Foo
 a.new(5)
-p a.class
+b = Foo
+b.new(7)
 a.method1
+p a.object_id
+b.method1
+p b.object_id
