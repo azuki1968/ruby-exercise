@@ -2,7 +2,7 @@
 require 'minitest/autorun'  #この記述をすることでMinitest::Testが実行される
 require './minitest_1_sub'  #読み込むソースコードの指定
 
-#assert_raises 
+#assert_raises
 class TestFoo < Minitest::Test  #Minitest::Testを継承したTestFooクラス
     def test_foo1
         err = assert_raises RuntimeError do
