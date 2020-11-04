@@ -24,5 +24,6 @@ Marshal.load(str)   #=> {:a=>1, :b=>3, :c=>5}
 #直接読み出して復元する
 file = File.open("/tmp/marshaldata", "w+")
 Marshal.dump({:a => 1, :b => 3, :c => 5}, file)
-Marshal.load(file)　 #=> {:a=>1, :b=>3, :c=>5}
+file.rewind
+Marshal.load(file)   #=> {:a=>1, :b=>3, :c=>5}
 
