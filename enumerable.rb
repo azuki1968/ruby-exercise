@@ -121,7 +121,7 @@
 [1,2,3,4,5].reject { |i| i % 2 == 0 }   #=> [1, 3, 5]
 #
 # lazy  mapメソッドやselectメソッドなどのメソッドが遅延評価を行うよう再定義される
-a = [1,2,3,4,5].select { |i| i % 2 == 0 }  #<Enumerator::Lazy:0x000055c38c5a67e8>
+a = [1,2,3,4,5].lazy.select { |i| i % 2 == 0 }  #<Enumerator::Lazy:0x000055c38c5a67e8>
 b = a.map { |i|  i * 2 }  #<Enumerator::Lazy:0x000055c38c5a5a00>
 c = a.take(3)             #<Enumerator::Lazy:0x000055c38c4a6a50>
 c .to_a  # ここで評価される　[2, 4]
