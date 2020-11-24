@@ -40,9 +40,6 @@ p yaml_stream  #=> [["Red", "Green", "Blue"], ["Yellow", "Pink", "White"]]
 YAML.load_documents(File.open "sample.yml") do |yaml|
 　p yaml.first
 end
-#エラーとなった
-#yaml.rb:40:in `<main>': undefined method `load_documents' for Psych:Module (NoMethodError)
-#Did you mean?  load_stream
 #=> "Red"
 #=> "Yellow"
 
