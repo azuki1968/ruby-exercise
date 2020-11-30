@@ -19,7 +19,6 @@ p FileUtils.pwd  #=> "/tmp"
 #FileUtils.copy(src, dest, options = {})
 #srcで指定したファイルをdestにコピーする
 #copyメソッドはcpのエイリアスメソッドで、cpメソッドと同じ動きをする
-p FileUtils.pwd  #=> "/tmp"
 
 #ファイル・ディレクトリの移動
 #FileUtils.mv(src, dest, options = {})
